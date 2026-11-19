@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Personal Site</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body id="top">
+  <div class="cursor-glow" aria-hidden="true"><div id="glowDot" class="glow-dot"></div></div>
+
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a href="#top" class="brand">
+        <span id="brandInitials" class="brand-mark">YN</span>
+        <span class="brand-name">personal_site</span>
+      </a>
+      <nav aria-label="Sections" class="nav">
+        <a href="#about">about</a>
+        <a href="#skills">skills</a>
+        <a href="#hobbies">hobbies</a>
+        <a href="#contact">contact</a>
+      </nav>
+      <span class="status"><span class="status-dot"></span><span id="statusText"></span></span>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="grid-bg hero-grid" aria-hidden="true"></div>
+      <div class="hero-fade" aria-hidden="true"></div>
+      <div id="bootLog" class="bootlog"></div>
+      <span class="vertical-label">scroll // 01</span>
+      <div class="container">
+        <p id="heroRole" class="hero-role"></p>
+        <h1 id="heroHeading" class="hero-heading">
+          <span id="heroName" class="hero-name"></span>
+          <span id="heroHeadline" class="hero-headline"></span>
+        </h1>
+        <div class="tagline">
+          <svg class="icon icon-primary tagline-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg>
+          <p><span id="typed"></span><span class="type-cursor" aria-hidden="true"></span></p>
+        </div>
+        <div class="hero-actions">
+          <a href="#skills" class="btn btn-primary">Enter the codebase</a>
+          <a href="#contact" class="btn btn-ghost">
+            <svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14"/><path d="m19 12-7 7-7-7"/></svg>
+            Say hi
+          </a>
+        </div>
+        <p class="hero-hint">press <span class="text-primary">/</span> for the terminal · a 45s timer is running in the corner</p>
+      </div>
+    </section>
+
+    <!-- TICKER -->
+    <div class="ticker">
+      <div id="tickerTrack" class="ticker-track"></div>
+    </div>
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <div class="container about-grid">
+        <div>
+          <div id="aboutHeading" class="section-heading"></div>
+          <div id="bio" class="bio"></div>
+          <pre class="code-block"><code>const me = {
+  focus: ["frontend", "automation", "hci"],
+  currently: "shipping small things",
+  willDebugFor: "coffee",
+};</code></pre>
+        </div>
+        <div id="aboutImages" class="about-images">
+          <div id="aboutImageWrap" class="about-image-wrap">
+            <img id="deskImg" class="about-main-img" alt="A dark desk at night, monitor glow across the room" />
+            <div class="img-overlay"></div>
+          </div>
+          <div class="about-small-grid">
+            <img id="keyboardImg" class="about-small-img" alt="Macro photo of a mechanical keyboard switch on a circuit board" />
+            <img id="synthImg" class="about-small-img" alt="Macro photo of patch cables on a modular synthesizer" />
+          </div>
+          <p class="about-caption">passion // hardware, sound, and the mess in between</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section">
+      <div class="container">
+        <div id="skillsHeading" class="section-heading"></div>
+        <div class="skills-grid">
+          <div id="skillsList" class="skills-list"></div>
+          <div class="skill-detail-wrap">
+            <div id="skillDetail" class="skill-detail"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOBBIES -->
+    <section id="hobbies" class="section">
+      <div class="container">
+        <div id="hobbiesHeading" class="section-heading"></div>
+        <p class="hobbies-intro">Every card opens — the good ones are the ones that taught me something I use in code.</p>
+        <div id="hobbiesGrid" class="hobbies-grid"></div>
+      </div>
+    </section>
+
+    <!-- TERMINAL / CONTACT -->
+    <section id="contact" class="section contact-section">
+      <div class="container">
+        <div id="contactHeading" class="section-heading"></div>
+        <div class="terminal-grid">
+          <div class="terminal">
+            <div class="terminal-head">
+              <span class="dot dot-green"></span>
+              <span class="dot dot-dim"></span>
+              <span class="dot dot-faint"></span>
+              <span>guest@personal_site</span>
+            </div>
+            <div id="terminalOutput" class="terminal-output"></div>
+            <form id="terminalForm" class="terminal-form">
+              <span class="term-prompt">$</span>
+              <input id="terminalInput" autocomplete="off" spellcheck="false" aria-label="Terminal command" placeholder='try "contact"' />
+              <button type="submit" class="run-btn">
+                run
+                <svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 10 4 15l5 5"/><path d="M20 4v7a4 4 0 0 1-4 4H4"/></svg>
+              </button>
+            </form>
+          </div>
+          <div id="contactCard" class="contact-card">
+            <p class="contact-label">contact_channel</p>
+            <div id="contactLinks" class="contact-links"></div>
+            <p id="contactMeta" class="contact-meta"></p>
+          </div>
+        </div>
+        <div class="footer">
+          <span><span id="footerName"></span> © <span id="footerYear"></span></span>
+          <span>template details — swap in your own in one pass</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- SESSION TIMER -->
+  <aside id="sessionTimer" class="session-timer">
+    <div class="timer-head">
+      <span>session_uptime</span>
+      <button id="timerMin" type="button" aria-label="Minimize session timer">−</button>
+    </div>
+    <div class="timer-nums">
+      <span id="timerSec">0s</span>
+      <span class="timer-total" id="timerTotal">/ 45s</span>
+    </div>
+    <div class="timer-bar"><div id="timerFill" class="timer-fill"></div></div>
+    <p id="timerMsg" class="timer-msg"></p>
+  </aside>
+  <button id="timerRestore" type="button" class="session-min hidden">
+    <span class="status-dot"></span><span id="timerMinLabel">0s / 45s</span>▾
+  </button>
+
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.4/dist/confetti.browser.min.js" defer></script>
+  <script src="data.js" defer></script>
+  <script src="script.js" defer></script>
+</body>
+</html>
